@@ -1,7 +1,7 @@
 ---
 title: Async
-categories: Little.Luo
-tags: JS
+categories: JavaScript
+tags: [异步, async, await, promise, generator]
 date: "2018-09-26"
 
 ---

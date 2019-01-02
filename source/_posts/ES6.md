@@ -1,7 +1,8 @@
 ---
 title: ES6常见特性
+categories: JavaScript
 date: 2017-9-12 21:07:06
-tags: ES6
+tags: [es6]
 ---
 
 ## 一.const，let，import，class

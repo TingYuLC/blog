@@ -1,6 +1,6 @@
 ---
 title: weex or react-native
-categories: Little.Luo
+categories: webApp
 tags: [weex, react-native]
 date: "2018-12-27"
 ---

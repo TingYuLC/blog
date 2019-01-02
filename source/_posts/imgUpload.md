@@ -1,7 +1,7 @@
 ---
 title: 图片上传
-categories: Little.Luo
-tags: 图片上传
+categories: JavaScript
+tags: [图片上传]
 date: "2018-08-30"
 ---
 

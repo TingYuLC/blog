@@ -1,7 +1,8 @@
 ---
 title: Flex
+categories: CSS
 date: 2017-10-12 23:09:33
-tags: Flex
+tags: [flex]
 ---
 
 **目前常见的布局方式有固定布局，流动布局，css3增加了弹性布局。**

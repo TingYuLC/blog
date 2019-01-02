@@ -1,7 +1,8 @@
 ---
 title: 前端跨域
+categories: JavaScript
 date: 2017-8-12 23:55:12
-tags: 跨域
+tags: [跨域, jsonp, domain, postMessage, cors]
 ---
 
 ##### 由于浏览器同源策略的原因，只有具有相同源的脚本和文档才能相互访问。

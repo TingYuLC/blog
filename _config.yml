@@ -4,10 +4,10 @@
 
 # Site
 title: 罗金城的博客
-subtitle:
-description:
-author: 小婊砸
-language:
+subtitle: 随笔
+description: 每天进步一点
+author: 罗金城
+language: zh-Hans
 timezone:
 
 # URL
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

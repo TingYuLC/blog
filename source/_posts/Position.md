@@ -1,7 +1,8 @@
 ---
 title: CSS 定位问题
+categories: CSS
 date: 2017-05-04 22:11:53
-tags: position
+tags: [position]
 ---
 
 ## 普通流（static）

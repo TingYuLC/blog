@@ -1,7 +1,8 @@
 ---
 title: this指针
+categories: JavaScript
 date: 2017-7-27 18:31:03
-tags: this指针
+tags: [this]
 ---
 
 # 问题一：this指向谁？<br/><br/>
