@@ -7,6 +7,8 @@ tags: [this]
 
 # 问题一：this指向谁？<br/><br/>
 
+**javascript中的this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window，而当函数被作为某个对象的方法调用时，this等于那个对象。**
+
 <font face="黑体">**刚接触JavaScript的时候，总会多多少少遇到this的指向问题，MDN给出了很多this的指向，包括全局上下文，函数上下文，箭头函数，对象，原型链等等的this指向，但我们更多的是无法弄清楚函数的指向。**</font>
 
 知乎上有大神用一句话总结了this的指向：<font color=red>谁调用函数，this就指向谁。
@@ -70,9 +72,26 @@ var o = new C();
 o.a;	// 37
 ```
 
-第四种，箭头函数的this，箭头函数是没有this的，因此箭头函数的this是词法作用域，会继承外层函数的this绑定。所谓的外层函数，无外乎<font colr=red>函数和全局对象</font>。
+第四种，匿名函数的this，由于匿名函数的执行环境具有全局性，因此其this对象通常指向window。
 
-例4：
+例四：
+
+```
+var name = 'window';
+var obj = {
+    name: 'name',
+    getName: function () {
+        return function () {
+          return this.name;  
+        };
+    }
+}
+obj.getName()();	// window
+```
+
+第五种，箭头函数的this，箭头函数是没有this的，因此箭头函数的this是词法作用域，会继承外层函数的this绑定。所谓的外层函数，无外乎<font colr=red>函数和全局对象</font>。
+
+例5：
 
 ```
 var a = 'window';
