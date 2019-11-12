@@ -129,9 +129,9 @@ scheme: Gemini
 social:
   GitHub: https://github.com/TingYuLC || github
   E-Mail: mailto:1317697565@qq.com || envelope
-  微信: http://luojc.cn/images/weixin.jpg || weixin
-  QQ: http://luojc.cn/images/qq.jpg || qq
-  简历: http://luojc.cn || address-card
+  微信: //luojc.cn/images/weixin.jpg || weixin
+  QQ: //luojc.cn/images/qq.jpg || qq
+  简历: //resume.luojc.cn || address-card
   知乎: https://www.zhihu.com/people/luo-cheng-20-76/activities || paper-plane
   # FB Page: https://www.facebook.com/yourname || facebook
   # VK Group: https://vk.com/yourname || vk
@@ -156,7 +156,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: //47.107.148.0/images/LittleBitch.jpg
+avatar: //luojc.cn/images/LittleBitch.jpg
 
 # Table Of Contents in the Sidebar
 toc:
