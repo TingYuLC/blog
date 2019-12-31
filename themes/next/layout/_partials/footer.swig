@@ -22,9 +22,9 @@
 </div>
 
 {% if theme.footer.powered %}
-  <div class="powered-by">{#
-  #}{{ __('footer.powered', '<a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a>') }}{#
-#}</div>
+  <a class="theme-link" target="_blank" href="http://www.beian.miit.gov.cn/">{#
+    #}{{ __('footer.powered') }}{#
+  #}</a>
 {% endif %}
 
 {% if theme.footer.custom_text %}

@@ -46,7 +46,8 @@ page:
   tags: 标签
 
 footer:
-  powered: "Copyright © 2017 luojc.cn - 粤ICP备 17071196 号"
+  powered: "Copyright © 2020 luojc.cn - 粤ICP备 17071196 号"
+  url: "http://www.beian.miit.gov.cn/"
   theme: 主题
 
 counter:
