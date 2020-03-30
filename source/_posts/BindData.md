@@ -3,7 +3,6 @@ title: Vue双向数据绑定
 categories: JavaScript
 tags: [Vue]
 date: "2020-03-30"
-
 ---
 
 ## 双向数据绑定
@@ -14,7 +13,7 @@ date: "2020-03-30"
 
 #### （2）通过Object.defineProperty()实现数据劫持，采用发布/订阅者模式，在get()时添加依赖，在编译时调用get()，在set()时发布依赖实现Dom更新。
 
-
+<!--more-->
 
 ### 2.实现：
 
