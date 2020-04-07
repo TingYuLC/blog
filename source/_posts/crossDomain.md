@@ -26,10 +26,14 @@ jsonp包括两部分，回调函数和数据。
       console.log(response.data);
 	}
 </script>
-<script src="http://www.luojc.cn/getJs.js"></script>
+<script src="http://www.little.cn/getJs.js?cb=getJsonp"></script>
 
-// 在http://www.luojc.cn页面下
-getJsonp({data:"我是服务器js文件，返回数据"});
+// 接口http://www.little.cn/getJs.js
+// 获取回调名称cb=query.cb
+const data = '后端的测试数据'
+ctx.body = `${cb}(data)`
+
+// 后端的响应其实就是回调函数，前端拿到后就自动执行了
 ```
 
 客户端通过script去请求服务器下的js文件，服务器下的js文件获取服务器数据返回给客户端。
@@ -42,7 +46,7 @@ getJsonp({data:"我是服务器js文件，返回数据"});
 
 ​	客户端，客户端是无法知晓的.
 
-3.,不知道jsonp是否请求失败，无法及时处理error.
+3.虽然可以通过onerror去捕获错误，但无法确切知道error是啥(404?500?),无法及时处理error.
 
 ## 二.img跨域.
 
