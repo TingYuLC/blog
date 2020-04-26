@@ -24,33 +24,43 @@ date: "2019-12-31"
 
 ### 二.Hybrid的交互方式.
 
+### 1.JS 调用 Native.
+
 #### (1)url scheme.
 
 <font color="red">1.H5将参数通过url发送给Native,并将回调函数保留在Window对象上.</font>
 
 <font color="red">2.Native通过拦截url获取H5的参数，Native进行相应处理后将调用Window对象上的回调函数.</font>
 
-优点：不存在兼容性问题，简单易用，基本功能需求都可以满足.
+Android的webview提供了shouldOverrideUrlLoading拦截url scheme.
 
-缺点：代码冗余，不支持return，参数过多时耗时长，ifame.src有长度隐患.
+IOS的webview本身会直接拦截url scheme.
 
-#### (2)Native暴露对象，H5调用.
+#### (2)重写prompt、alert、confirm、console.log等方法.
 
-<font color="red">Native暴露对象给H5，H5直接调用.</font>
+<font color="red">1.H5通过prompt等方法发送参数</font>
 
-优点：支持return.
+<font color="red">2.Native端重写prompt等方法获取参数</font>
 
-缺点：不支持回调，在异步函数无法return的情况下无法知道结果，存在兼容性和安全性问题.
+Android的webview的onJsAlert、onJsConfirm、onConsoleMessage、onJsPrompt可以分别拦截
 
-#### (3)JSBridge.
+js的alert、confirm、console.log、prompt方法.
 
-<font color="red">1.Native将对象暴露给H5，H5直接调用.</font>
+iOS由于安全限制会拦截对prompt、alert、confirm、console.log，只需要实现相应的代理方法即可.
 
-<font color="red">2.H5将对象绑定在Window上，Native直接调用.</font>
+#### (3)注入API.
 
-优点：不需要通过url scheme去发送参数，不存在兼容性和安全问题.
+<font color="red">1.Native对webview的window对象注入对象或方法，H5直接调用.</font>
 
-缺点：不支持return，前期搭建复杂，排除问题相对麻烦.
+Android的webview提供了addJavascriptInterface方法.
+
+IOS的webview提供了JavascriptCore方法.
+
+### 2.Native调用JS.
+
+<font color="red">H5将回调函数注册在window对象下，native直接调用.</font>
+
+<font color="red">Android和IOS都提供了evaluateJavaScript来执行js代码.</font>
 
 ### 三.例子:Jockey.js的H5实现(url scheme方式).
 
