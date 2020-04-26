@@ -7,7 +7,10 @@ tags: [this]
 
 # 问题一：this指向谁？<br/><br/>
 
-**javascript中的this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window，而当函数被作为某个对象的方法调用时，this等于那个对象。**
+**javascript中的this对象是在运行时基于函数的执行环境绑定的：**
+
+**(1)在非严格模式下，this指向全局对象。浏览器下，全局对象为window，且与全局变量绑定在一起；node下，全局对象为global，但不与全局变量绑定在一起。**
+**(2)在严格模式下，this不指向全局对象。**
 
 <font face="黑体">**刚接触JavaScript的时候，总会多多少少遇到this的指向问题，MDN给出了很多this的指向，包括全局上下文，函数上下文，箭头函数，对象，原型链等等的this指向，但我们更多的是无法弄清楚函数的指向。**</font>
 
@@ -36,7 +39,7 @@ foo();	//window
 
 在node环境下，全局对象是global，但没有跟全局变量绑定在一起。
 
-<font color=red>在本文章，执行环境默认为window。</font>
+<font color=red>在本文章，执行环境默认为非严格模式，浏览器环境。</font>
 
 接下来看另一种情况：
 

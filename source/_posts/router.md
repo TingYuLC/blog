@@ -1,3 +1,10 @@
+---
+title: Router
+categories: JavaScript
+date: 2020-04-22 23:09:33
+tags: [Vue, React]
+---
+
 # hash router && history router
 
 ### 1.hash模式在形式上比history模式多了个#符号。
